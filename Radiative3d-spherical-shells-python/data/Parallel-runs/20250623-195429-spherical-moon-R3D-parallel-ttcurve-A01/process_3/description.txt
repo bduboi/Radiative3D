@@ -1,0 +1,2 @@
+(BRIEF description of run goes here.)
+Spherical whole-Earth simulation.

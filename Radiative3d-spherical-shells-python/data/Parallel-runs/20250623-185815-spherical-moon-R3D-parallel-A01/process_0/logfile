@@ -1,0 +1,7 @@
+Machine:  es09250.anu.edu.au
+User:  balthazar
+Revision:  Unversioned directory
+Begin Radiative3D Run: 2025.06.23-18:58:16
+/Users/balthazar/Downloads/Radiative3d-spherical-shells/data/Parallel-runs/20250623-185815-spherical-moon-R3D-parallel-A01/process_0/main --reports=INV --output-dir="/Users/balthazar/Downloads/Radiative3d-spherical-shells/data/Parallel-runs/20250623-185815-spherical-moon-R3D-parallel-A01/process_0" --report-file=reports.dat --output-envelope=1 --mparams-outfile=out_mparams.octv --num-phonons=100K --toa-degree=8 --source=SDR,90,90,0 --source-loc=0,0,-917 --frequency=2.0 --timetolive=3600 --model-path=/Users/balthazar/Downloads/Radiative3d-spherical-shells/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv --binsize=0.5 --grid-compiled=666 --model-args= --dump-grid ${SEIS1} ${SEIS2} ${SEIS3} ${SEIS4} --earthrad=1737.1
+End__ Radiative3D Run: 2025.06.23-18:58:23
+(0.00 Hours Run-Time)

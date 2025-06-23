@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EarthModel active="Y" id="10131355">
+   <ProductDescription>Earth Model</ProductDescription>
+   <Description>iasp91 velocity model</Description>
+   <SubType>Reference</SubType>
+   <ProductId>IASP91</ProductId>
+   <DOI>10.17611/DP/10131355</DOI>
+   <EXTERN_DOI>10.17611/DP/9991809</EXTERN_DOI>
+   <Link>http://ds.iris.edu/spudservice/earthmodel/10131355</Link>
+   <Tags>Tags go here</Tags>
+   <LocationTime id="17997024">
+      <DepthMin>0.0</DepthMin>
+      <DepthMax>6371.0</DepthMax>
+   </LocationTime>
+   <Provenance>
+      <CreateTime>2011-06-30T06:20:00</CreateTime>
+      <CreatingApplication>EMC</CreatingApplication>
+      <CreatingApplicationVersion>V1.0</CreatingApplicationVersion>
+      <Creator>
+         <Email>product@iris.washinton.edu</Email>
+         <Name>Product</Name>
+         <Org>IRIS DMC</Org>
+         <OrgLogoUrl>http://www.iris.edu/hq/images/layout/irisFooterLogo.gif</OrgLogoUrl>
+         <OrgUrl>http://ds.iris.edu</OrgUrl>
+      </Creator>
+      <ModificationTime>2019-12-06T19:08:25</ModificationTime>
+      <SubmitTime>2015-10-13T14:59:59</SubmitTime>
+      <Submitter>
+         <Email>product@iris.washington.edu</Email>
+         <Name>Product</Name>
+         <Org>IRIS DMC</Org>
+         <OrgLogoUrl>http://www.iris.edu/hq/images/layout/irisFooterLogo.gif</OrgLogoUrl>
+         <OrgUrl>http://ds.iris.edu</OrgUrl>
+      </Submitter>
+   </Provenance>
+   <PrimaryReference id="17997031">
+      <Description>www.iaspei.org/projects/projects.html</Description>
+      <Url>http://www.iaspei.org/projects/projects.html</Url>
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primaryreference/17997031</Link>
+   </PrimaryReference>
+   <PrimaryData id="11582567">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/11582567</Link>
+      <Filename>image/IASP91.png</Filename>
+      <Description>
+iasp91 velocity model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44422</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/11582567</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17992638">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/17992638</Link>
+      <Filename>image/IASP91.png</Filename>
+      <Description>
+iasp91 velocity model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44422</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17992638</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17965493">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/17965493</Link>
+      <Filename>image/IASP91.png</Filename>
+      <Description>
+iasp91 velocity model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44422</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17965493</DataLink>
+   </PrimaryData>
+   <PrimaryData id="10131352">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/10131352</Link>
+      <Filename>image/IASP91.png</Filename>
+      <Description>
+iasp91 velocity model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44422</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/10131352</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17997030">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/17997030</Link>
+      <Filename>image/IASP91.png</Filename>
+      <Description>
+iasp91 velocity model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44422</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17997030</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17994242">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/17994242</Link>
+      <Filename>image/IASP91.png</Filename>
+      <Description>
+iasp91 velocity model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44422</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17994242</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17995879">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/17995879</Link>
+      <Filename>image/IASP91.png</Filename>
+      <Description>
+iasp91 velocity model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44422</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17995879</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17997027">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/17997027</Link>
+      <Filename>data2/IASP91/IASP91.csv</Filename>
+      <Description>The model in comma separated value (CSV) file format [columns lef to right representing Depth (km), Radius (km), Vp (km/s), and Vs (km/s)]
+                </Description>
+      <MimeType>application/octet-stream</MimeType>
+      <Size>4421</Size>
+      <GroupKey>1</GroupKey>
+      <OrderKey>0</OrderKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17997027</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17997028">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/17997028</Link>
+      <Filename>data2/IASP91/IASP91_IDV.csv</Filename>
+      <Description>The model in comma separated value (CSV) IDV file format
+                </Description>
+      <MimeType>application/octet-stream</MimeType>
+      <Size>4520</Size>
+      <GroupKey>1</GroupKey>
+      <OrderKey>1</OrderKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17997028</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17997029">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/primarydata/17997029</Link>
+      <Filename>data/IASP91_kmps.nc</Filename>
+      <Description>The model in netCDF format
+                </Description>
+      <MimeType>application/x-netcdf</MimeType>
+      <Size>79460316</Size>
+      <GroupKey>1</GroupKey>
+      <OrderKey>2</OrderKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17997029</DataLink>
+   </PrimaryData>
+   <SourceData id="17997032">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131355/sourcedata/17997032</Link>
+      <Filename>Source/part</Filename>
+      <Description>Source XML</Description>
+      <MimeType>application/xml</MimeType>
+      <Size>3736</Size>
+      <DataLink>http://ds.iris.edu/spudservice/data/17997032</DataLink>
+   </SourceData>
+   <Authors>
+B.L.N. Kennett &amp; E.R. Engdahl
+	</Authors>
+   <earthmodelMetaList>
+      <attributes>title = &quot;1D Reference Earth shear wave velocity model&quot;,id = &quot;IASP91&quot;,summary = &quot;iasp91 1D reference velocity model&quot;,keywords = &quot;seismic, reference, shear wave, s wave, p wave, elastic waveform, earth model, Vs, Vp&quot;,Conventions = &quot;CF-1.0&quot;,Metadata_Conventions = &quot;Unidata Dataset Discovery v1.0&quot;,creator_name = &quot;IRIS EMC&quot;,creator_url = &quot;http://www.iris.edu/dms/products/emc/&quot;,creator_email = &quot;product@iris.washington.edu&quot;,institution = &quot;IRIS DMC&quot;,reference = &quot;IASPEI 1991 Seismological Tables&quot;,references = &quot;http://ds.iris.edu/ds/products/emc-references&quot;,references_citation = &quot;Kennett, B.L.N. (Compiler and Editor). 1991. “IASPEI 1991 Seismological Tables.” Bibliotech, Canberra, Australia, 167 pp.&quot;,history = &quot;2019-12-05 IRIS DMC, updated geospatial fields, if needed, to float \nWed Nov 20 10:27:43 2019: ncatted -O -a creator_email,global,m,c,product@iris.washington.edu IASP91_kmps.nc\nCreated by GeoCSV_2_netCDF_3D.py (2019-11-07T23:27:19+00:00)\n2019-11-07 DMC: shifted repeated depths slightly to comply with CD \n2010-06-16 model converted to netCDF by IRIS EMC&quot;,comment = &quot;model converted to netCDF by IRIS EMC&quot;,geospatial_lat_min = -90.0,geospatial_lat_max = 90.0,geospatial_lat_units = &quot;degrees_north&quot;,geospatial_lat_resolution = 1,geospatial_lon_min = -180.0,geospatial_lon_max = 180.0,geospatial_lon_units = &quot;degrees_east&quot;,geospatial_lon_resolution = 1,geospatial_vertical_min = 0,geospatial_vertical_max = 6371.0,geospatial_vertical_units = &quot;km&quot;,geospatial_vertical_positive = &quot;down&quot;,source = &quot;Converted from IASP91_kmps.csv&quot;,NCO = &quot;netCDF Operators version 4.7.5 (Homepage = http://nco.sf.net, Code = http://github.com/nco/nco)&quot;,</attributes>
+      <dimensions>latitude,longitude,depth,</dimensions>
+      <latMax>90.00000</latMax>
+      <latMin>-90.00000</latMin>
+      <latResolution>1.00000</latResolution>
+      <lonMax>180.00000</lonMax>
+      <lonMin>-180.00000</lonMin>
+      <lonResolution>1.00000</lonResolution>
+      <modelName>IASP91_kmps.nc</modelName>
+      <summary>iasp91 1D reference velocity model</summary>
+      <title>1D Reference Earth shear wave velocity model</title>
+      <variables>vp,vs,</variables>
+      <verticalMax>6371.00000</verticalMax>
+      <verticalMin>0.00000</verticalMin>
+      <verticalPositive>down</verticalPositive>
+      <verticalUnits>km</verticalUnits>
+   </earthmodelMetaList>
+   <EmcRef>
+      <Description>ds.iris.edu/ds/products/emc-iasp91/</Description>
+      <Url>http://ds.iris.edu/ds/products/emc-iasp91/</Url>
+   </EmcRef>
+   <ModelDescription>
+A parameterised velocity model that has been constructed to be a summary of the travel time characteristics of the main seismic phases.
+	</ModelDescription>
+   <ModelReferences>
+Kennett B.L.N. and Engdahl E.R., 1991. &quot;Travel times for global earthquake location and phase association.&quot; Geophysical Journal International, 105:429-465.
+	</ModelReferences>
+   <ModelSubType>P and S velocities</ModelSubType>
+   <ModelType>1D Reference</ModelType>
+   <ReferenceModel></ReferenceModel>
+   <ShortReference>
+Kennett and Engdahl (1991) 
+	</ShortReference>
+</EarthModel>

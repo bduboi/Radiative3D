@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EarthModel active="Y" id="10131347">
+   <ProductDescription>Earth Model</ProductDescription>
+   <Description>ak135-F spherical average model</Description>
+   <SubType>Reference</SubType>
+   <ProductId>AK135-F</ProductId>
+   <DOI>10.17611/DP/10131347</DOI>
+   <EXTERN_DOI>10.17611/DP/9991801</EXTERN_DOI>
+   <Link>http://ds.iris.edu/spudservice/earthmodel/10131347</Link>
+   <Tags>Tags go here</Tags>
+   <LocationTime id="17996973">
+      <DepthMin>0.0</DepthMin>
+      <DepthMax>6371.0</DepthMax>
+   </LocationTime>
+   <Provenance>
+      <CreateTime>2011-06-30T06:20:00</CreateTime>
+      <CreatingApplication>EMC</CreatingApplication>
+      <CreatingApplicationVersion>V1.0</CreatingApplicationVersion>
+      <Creator>
+         <Email>product@iris.washinton.edu</Email>
+         <Name>Product</Name>
+         <Org>IRIS DMC</Org>
+         <OrgLogoUrl>http://www.iris.edu/hq/images/layout/irisFooterLogo.gif</OrgLogoUrl>
+         <OrgUrl>http://ds.iris.edu</OrgUrl>
+      </Creator>
+      <ModificationTime>2019-12-06T19:07:49</ModificationTime>
+      <SubmitTime>2015-10-13T14:59:58</SubmitTime>
+      <Submitter>
+         <Email>product@iris.washington.edu</Email>
+         <Name>Product</Name>
+         <Org>IRIS DMC</Org>
+         <OrgLogoUrl>http://www.iris.edu/hq/images/layout/irisFooterLogo.gif</OrgLogoUrl>
+         <OrgUrl>http://ds.iris.edu</OrgUrl>
+      </Submitter>
+   </Provenance>
+   <PrimaryReference id="17996980">
+      <Description>rses.anu.edu.au/seismology/ak135/ak135f.html</Description>
+      <Url>http://rses.anu.edu.au/seismology/ak135/ak135f.html</Url>
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primaryreference/17996980</Link>
+   </PrimaryReference>
+   <PrimaryData id="11241147">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/11241147</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/11241147</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17964416">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17964416</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17964416</DataLink>
+   </PrimaryData>
+   <PrimaryData id="11582559">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/11582559</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/11582559</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17996979">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17996979</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17996979</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17995828">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17995828</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17995828</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17994191">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17994191</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17994191</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17993863">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17993863</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17993863</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17993608">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17993608</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17993608</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17992587">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17992587</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17992587</DataLink>
+   </PrimaryData>
+   <PrimaryData id="10131344">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/10131344</Link>
+      <Filename>image/AK135F.png</Filename>
+      <Description>
+ak135-F average Earth model
+                </Description>
+      <MimeType>image/png</MimeType>
+      <Size>44485</Size>
+      <GroupKey>0</GroupKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/10131344</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17996976">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17996976</Link>
+      <Filename>data2/AK135F/AK135F_AVG.csv</Filename>
+      <Description>The model in comma separated value (CSV) file format (see the model's web page for notes on the upper mantle density model)
+                </Description>
+      <MimeType>application/octet-stream</MimeType>
+      <Size>6346</Size>
+      <GroupKey>1</GroupKey>
+      <OrderKey>0</OrderKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17996976</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17996977">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17996977</Link>
+      <Filename>data2/AK135F/AK135F_AVG_IDV.csv</Filename>
+      <Description>The model in comma separated value (CSV) IDV file format (see the model's web page for notes on the upper mantle density model)
+                </Description>
+      <MimeType>application/octet-stream</MimeType>
+      <Size>6495</Size>
+      <GroupKey>1</GroupKey>
+      <OrderKey>1</OrderKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17996977</DataLink>
+   </PrimaryData>
+   <PrimaryData id="17996978">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/primarydata/17996978</Link>
+      <Filename>data/AK135F_kmps.nc</Filename>
+      <Description>The model in netCDF format (see the model's web page for notes on the upper mantle density model)
+                </Description>
+      <MimeType>application/x-netcdf</MimeType>
+      <Size>75801160</Size>
+      <GroupKey>1</GroupKey>
+      <OrderKey>2</OrderKey>
+      <DataLink>http://ds.iris.edu/spudservice/data/17996978</DataLink>
+   </PrimaryData>
+   <SourceData id="17996981">
+      <Link>http://ds.iris.edu/spudservice/earthmodel/10131347/sourcedata/17996981</Link>
+      <Filename>Source/part</Filename>
+      <Description>Source XML</Description>
+      <MimeType>application/xml</MimeType>
+      <Size>4110</Size>
+      <DataLink>http://ds.iris.edu/spudservice/data/17996981</DataLink>
+   </SourceData>
+   <Authors>
+Kennett, Engdahl, Buland &amp; Montagner 
+	</Authors>
+   <earthmodelMetaList>
+      <attributes>title = &quot;1D Reference Earth shear wave velocity model&quot;,id = &quot;AK135F&quot;,summary = &quot;AK135f 1D reference velocity model&quot;,keywords = &quot;seismic, reference, shear wave, s wave, p wave, elastic waveform, earth model, Vs, Vp&quot;,Conventions = &quot;CF-1.0&quot;,Metadata_Conventions = &quot;Unidata Dataset Discovery v1.0&quot;,creator_name = &quot;IRIS EMC&quot;,creator_url = &quot;http://ds.iris.edu/ds/products/emc/&quot;,creator_email = &quot;product@iris.washington.edu&quot;,institution = &quot;IRIS DMC&quot;,history = &quot;2019-12-05 IRIS DMC, updated geospatial fields, if needed, to convert to float \nWed Nov 20 10:27:24 2019: ncatted -O -a creator_email,global,m,c,product@iris.washington.edu AK135F_kmps.nc\nCreated by GeoCSV_2_netCDF_3D.py (2019-11-07T17:14:58+00:00)&quot;,comment = &quot;model converted to netCDF by IRIS EMC added 0.01 to repeated depth to comply with CF&quot;,reference = &quot;Kennett, Engdahl, and Buland, 1995&quot;,references = &quot;http://ds.iris.edu/ds/products/emc-references&quot;,references_citation = &quot;Kennett B.L.N., E.R. Engdahl and R. Buland. 1995. “Constraints on seismic velocities in the earth from travel times” Geophys. J. Int. 122:108-124.&quot;,geospatial_lat_min = -90.0,geospatial_lat_max = 90.0,geospatial_lat_units = &quot;degrees_north&quot;,geospatial_lat_resolution = 1,geospatial_lon_min = -180.0,geospatial_lon_max = 180.0,geospatial_lon_units = &quot;degrees_east&quot;,geospatial_lon_resolution = 1,geospatial_vertical_min = 0,geospatial_vertical_max = 6371.0,geospatial_vertical_units = &quot;km&quot;,geospatial_vertical_positive = &quot;down&quot;,source = &quot;Converted from AK135F_kmps.csv&quot;,NCO = &quot;netCDF Operators version 4.7.5 (Homepage = http://nco.sf.net, Code = http://github.com/nco/nco)&quot;,</attributes>
+      <dimensions>latitude,longitude,depth,</dimensions>
+      <latMax>90.00000</latMax>
+      <latMin>-90.00000</latMin>
+      <latResolution>1.00000</latResolution>
+      <lonMax>180.00000</lonMax>
+      <lonMin>-180.00000</lonMin>
+      <lonResolution>1.00000</lonResolution>
+      <modelName>AK135F_kmps.nc</modelName>
+      <summary>AK135f 1D reference velocity model</summary>
+      <title>1D Reference Earth shear wave velocity model</title>
+      <variables>vp,vs,</variables>
+      <verticalMax>6371.00000</verticalMax>
+      <verticalMin>0.00000</verticalMin>
+      <verticalPositive>down</verticalPositive>
+      <verticalUnits>km</verticalUnits>
+   </earthmodelMetaList>
+   <EmcRef>
+      <Description>ds.iris.edu/ds/products/emc-ak135-f/`</Description>
+      <Url>http://ds.iris.edu/ds/products/emc-ak135-f/</Url>
+   </EmcRef>
+   <ModelDescription>
+The ak135 velocity model, Kennett, Engdahl &amp; Buland (1995) , is augmented with a density and Q model, Montagner &amp; Kennett (1996) . 
+	</ModelDescription>
+   <ModelReferences>
+Kennett B. L. N., Engdahl E. R. and Buland R. 1995. &quot;Constraints on seismic velocities in the earth from travel times&quot; Geophys. J. Int. 122:108-124.
+&lt;br/>&lt;br/>
+Montagner J.P. &amp; Kennett B.L.N. 1996. &quot;How to reconcile body-wave and normal-mode reference Earth models?&quot; Geophys. J. Int. 125:229-248
+	</ModelReferences>
+   <ModelSubType>full model</ModelSubType>
+   <ModelType>1D Reference</ModelType>
+   <ReferenceModel>ak135</ReferenceModel>
+   <ShortReference>
+Kennett, Engdahl &amp; Buland (1995); Montagner &amp; Kennett (1996)
+	</ShortReference>
+</EarthModel>

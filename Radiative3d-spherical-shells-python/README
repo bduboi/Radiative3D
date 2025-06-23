@@ -1,0 +1,10 @@
+Appendix B for "Seismology on Mars: an analysis of direct, reflected and converted seismic body waves with implications for interior structure" by Duran et al.
+
+This folder contains seismic velocity models of Mars obtained using the geophysical method, as shown in Figure 17 of the article. 
+
+Geophysical_models: The "geophysical" inversion, fitting differential travel times, receiver functions, MoI and mean density
+
+All models are in the nd format, which is readable by TauP.
+
+NOTE: For reasons of compatibility with TauP, each model file has a tiny inner core. This inner core is not a result of the inversion. Lower mantle Vp structure is not constrained by seismic data.
+

@@ -1,0 +1,105 @@
+**
+**  Radiative3D - A code for radiative transport in 3D Earth models
+**
+**  (c) 2020 Christopher J. Sanborn and the
+**           Solid Earth Geophysics Team
+**           at the University of Connecticut, Storrs, CT.
+**           https://github.com/christophersanborn/Radiative3D
+**
+**  BUILD STATS:  Floating-point representation: 64-bit
+**
+**
+Simulation will output envelope data.
+DEBUG: Processing option --model-path /Users/balthazar/Downloads/Radiative3d-spherical-shells/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv with ID = 11
+Warning: Seis array interpolation ignores coordinate system and could produce distorted results.
+TOA_Degree: 8                              
+Frequency: 2                               
+Number of Phonons: 100000                      
+Time to Live: 3600                           
+Time Bin Size: 0.5                           
+Cylinder Range: 600               (default)
+Args provided for "compiled" model are: (none)
+8 Seismometers Requested.
+Event Location: (0, 0, -917) (User Coord System)
+Event Moment Tensor:
+The contents of this matrix are:
+	x	y	z	
+    +---------------------------
+  x |	-8.65956e-17	-0.707107	-2.65123e-33		Magnitude: 1
+  y |	-0.707107	8.65956e-17	-4.32978e-17		Trace:     0
+  z |	-2.65123e-33	-4.32978e-17	0		Iso Frac:  0
+
+@@ __BEGIN_MODEL_INITIALIZATION__
+@@ __DISCRETIZING_TOA__
+|
+| 1310720  Take-off angles initialized for event and scattering sources.
+|          (TesselSphere of degree 8.)
+|
+@@ __CONSTRUCTING_GRID__
+|
+|  Grid source: File Model from path : /Users/balthazar/Downloads/Radiative3d-spherical-shells/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv
+Entering Function GridFromFile ! 
+the file path: /Users/balthazar/Downloads/Radiative3d-spherical-shells/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv
+Scattering params at depth 0: epsilon=0.001 kappa=0.8 a=10000 nu=0.2
+Scattering params at depth 28: epsilon=0.001 kappa=0.8 a=10000 nu=0.2
+Scattering params at depth 1272: epsilon=0.001 kappa=0.8 a=10000 nu=0.2
+Scattering params at depth 1298: epsilon=0.001 kappa=0.8 a=10000 nu=0.2
+Scattering params at depth 1313: epsilon=0.001 kappa=0.8 a=10000 nu=0.2
+Scattering params at depth 1323: epsilon=0.001 kappa=0.8 a=10000 nu=0.2
+|
+|       7  Grid nodes initialized.  Arrangement: 1 x 1 x 7
+|
+|  Level planes were curved with Earth Radius = 1737.1
+|
+@@ __STAGING_EARTH_MODEL_ONTO_GRID__
+|
+|  Building SPHERICAL SHELL model... 
+|  (This may take a while.)
+|
+|       6  Model cells constructed.
+|       6  Scatterer objects allocated among cells.
+|
+@@ __INITIALIZING_EVENT_SOURCE__
+@@ __INITIALIZING_SEISMOMETERS__
+@@ __MODEL_INITIALIZATION_COMPLETE__
+Grid Dumping !
+#  R3D_GRID:
+#  Line 1:  ni nj nk
+#  Line 2:  Index_Base
+#  Lines 3 and up describe grid nodes:
+#  i j k    x y x    vp vs rho qp qs    nu eps a k
+#
+1 1 7
+0
+  0   0   0      0.00000     0.00000     0.00000      1.00000   0.50000   2.60000       939.6     328.3     0.20000   0.00100 10000.00000   0.80000
+  0   0   1      0.00000     0.00000   -28.00000      5.50000   3.30000   2.60000       666.5     328.3     0.20000   0.00100 10000.00000   0.80000
+  0   0   1      0.00000     0.00000   -28.00000      7.68000   4.41000   3.34000       539.7     357.6     0.20000   0.00100 10000.00000   0.80000
+  0   0   2      0.00000     0.00000 -1272.00000      8.18000   4.67000   3.45000       542.2     357.6     0.20000   0.00100 10000.00000   0.80000
+  0   0   2      0.00000     0.00000 -1272.00000      8.15000   4.57000   3.45000       549.9     357.6     0.20000   0.00100 10000.00000   0.80000
+  0   0   3      0.00000     0.00000 -1298.00000      8.15000   4.57000   3.45000       549.9     357.6     0.20000   0.00100 10000.00000   0.80000
+  0   0   3      0.00000     0.00000 -1298.00000      8.11000   4.51000   3.45000       553.4     357.6     0.20000   0.00100 10000.00000   0.80000
+  0   0   4      0.00000     0.00000 -1313.00000      8.11000   4.51000   3.45000       553.4     357.6     0.20000   0.00100 10000.00000   0.80000
+  0   0   4      0.00000     0.00000 -1313.00000      8.07000   4.48000   3.46000        14.5       6.0     0.20000   0.00100 10000.00000   0.80000
+  0   0   5      0.00000     0.00000 -1323.00000      8.07000   4.48000   3.46000        14.5       6.0     0.20000   0.00100 10000.00000   0.80000
+  0   0   5      0.00000     0.00000 -1323.00000      4.00000   0.00001   3.98000     56580.7       6.0     0.20000   0.00100 10000.00000   0.80000
+  0   0   6      0.00000     0.00000 -1737.10000      4.00000   0.00001   4.55000     56580.7       6.0     0.20000   0.00100 10000.00000   0.80000
+#  END R3D_GRID
+#  BEGIN SCATTERER DUMP:
+#  Overrides: None
+#      nu    eps        a    kappa         el       gam0         address      MFP (P)    MFP (S)      DM (P)    DM (S)
+#  ====== ====== ======== ======== ========== ==========    ============    =========  =========    ========  ========
+      0.2  0.001    10000      0.8    25.1327          2    0x60000019c000       257951     390985           1         1
+      0.2  0.001    10000      0.8    2.84952     1.7415    0x60000019c0c0      75995.9     105934           1         1
+      0.2  0.001    10000      0.8    2.74975    1.78337    0x60000019c180      73345.2     103695           1         1
+      0.2  0.001    10000      0.8    2.78633    1.79823    0x60000019c240      73561.1     104520           1         1
+      0.2  0.001    10000      0.8    2.80499    1.80134    0x600000190000      73778.8     104938           1         1
+      0.2  0.001    10000      0.8 1.25664e+06     400000    0x600000194000       112309  2.57953e+08           1         1
+#  ====== ====== ======== ======== ========== ==========    ============    =========  =========    ========  ========
+#  END SCATTERERS
+@@ __BEGINNING_SIMULATION__
+@@ __SIMULATION_COMPLETE__
+Printing Post-Sim Summary: 
+->  Phonons lost due to:
+      Loss surfaces:  0
+      Timeout:        100000
+      Invalidity:     0  (Diag: 0x0)

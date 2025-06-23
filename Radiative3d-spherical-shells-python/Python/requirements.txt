@@ -1,0 +1,6 @@
+numpy
+matplotlib
+obspy
+cartopy
+pandas
+ipywidgets

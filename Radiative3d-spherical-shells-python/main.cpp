@@ -156,9 +156,7 @@ void print_banner() {
        << "**           https://github.com/christophersanborn/Radiative3D"
                         << std::endl
        << "**" << std::endl;
-  *out << "**  BUILD STATS:  "
-       //<< "Revision number: " << REVISION_NUM << std::endl
-       //<< "**                "
+  *out << "**  BUILD STATS:  "   
        << "Floating-point representation: " << (8*sizeof(Real))
        << "-bit" << std::endl
        << "**" << std::endl

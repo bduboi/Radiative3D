@@ -71,7 +71,7 @@ cat process_0/stdout.txt | \
 
 "$PYTHON_EXEC" -q - <<EOF
 import os,sys
-sys.path.append("$BASE")
+sys.path.append("$BASE/Python/")
 from Radiative_python_funcs import *
 current_path = os.getcwd()
 GG=read_gridgeom(f'{current_path}/griddump.txt')

@@ -15,16 +15,23 @@ export R3DBASE
 
 SINGLE_CORE=$(cat $R3DBASE/Params/single_core.txt)
 echo "SINGLE_CORE: $SINGLE_CORE"
+
 if [[ "$SINGLE_CORE" -eq 1 ]]; then
     echo "Running in single-core mode."
     OUTPARALLEL=$(cat "$R3DBASE/data/Single-core-runs/latest_run.txt")
     mkdir -p "$OUTPARALLEL"
     echo "Storing results in $OUTPARALLEL"
 else
+    PROCNB=$OMPI_COMM_WORLD_RANK
+    if [ -z "$PROCNB" ]; then
+        echo "OMPI_COMM_WORLD_RANK is not set. Running in single-core mode. Exiting."
+        exit 1  
+    fi
+    
     echo "Running in parallel mode."
     echo " Hello from process $PROCNB !"
     OUTPARALLEL=$(cat $R3DBASE/data/Parallel-runs/latest_run.txt)
-    PROCNB=$OMPI_COMM_WORLD_RANK
+    
     OUTPARALLEL="$OUTPARALLEL/process_$PROCNB"
     mkdir -p "$OUTPARALLEL/process_$PROCNB"
     echo "Storing results in $OUTPARALLEL/process_$PROCNB"

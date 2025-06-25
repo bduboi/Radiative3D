@@ -1,7 +1,7 @@
 #!/bin/bash -ux
 
 # Local testing config
-BASE="/Users/balthazar/Downloads/Radiative3d-spherical-shells"
+BASE=`pwd`
 PYTHON_EXEC="python3"
 ENV_PATH="$BASE/R3Denv/bin/activate"
 PARAMFILE="$BASE/Params/source_params.txt"
@@ -62,6 +62,7 @@ echo "Plotting the tt curve."
 
 ### To do : Set up the normcurve comparison
 RAD=$(cat $BASE/Params/rad.txt)
+echo "Using Earth radius: $RAD km"
 # Individual Traveltime Curves:
 
 produce_ttcurves() {  # $1: station code

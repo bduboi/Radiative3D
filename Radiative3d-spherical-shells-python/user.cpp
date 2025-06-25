@@ -24,6 +24,10 @@
 #include <cstdlib>      /* exit()     */
 #include <algorithm>    /* std::max() */
 #include "grid.hpp"
+#include <fstream>   // for std::ifstream
+#include <map>       // for std::map
+#include <vector>    // for std::vector
+#include <string>    // for std::string (if you're using it)
 
 // PROTOTYPES:
 void LopNorCylinder(Grid &, const std::vector<Real> &);
@@ -43,7 +47,6 @@ void ToySphere(Grid &, const std::vector<Real> &);
 #include "user_Upthrust_inc.cpp"
 #include "user_SphereEarth_inc.cpp"
 #include "user_ToySphere_inc.cpp"
-#include "user_ReadModelFile.cpp"
 
 //////
 // METHOD:  Grid :: ConstructGridManual()
@@ -364,10 +367,10 @@ column_index++;
             //std::cout << "Scattering params at depth " << depth[i+1] << ": epsilon=" << epsilon[i+1] 
          // << " kappa=" << kappa[i+1] << " a=" << a[i+1] << " nu=" << nu[i+1] << std::endl;
     }
-    //std::cout<< "Exiting Function GridFromFile ! " << std::endl;
+    std::cout<< "Exiting Function GridFromFile ! " << std::endl;
     //print the node values:
      
-    return;
+    return ; // Exit the function after reading the file and setting the grid nodes.
 }
     
 

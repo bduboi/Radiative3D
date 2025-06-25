@@ -19,7 +19,6 @@
 
 ## One-liner description: (Keep this BRIEF.)
 ##
-
 BASE=`pwd`  # Base directory for the run.
 PYTHON_EXEC="python3"
 ENV_PATH="$BASE/R3Denv/bin/activate"
@@ -59,7 +58,7 @@ NUMPHONS=100K                   # Number of phonons to spray (Recommend: 50M)
 RECTIME=3600                  # Recording duration of seismometers (seconds).
 BINSIZE=0.5                  # Seismometer time-bin size in seconds
 GATHER=500.0                  # Terminal gather radius, in kilometers.
-MODELPATH="/Users/balthazar/Downloads/Radiative3d-spherical-shells/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv" #Path of the model to be used. Default is SimplifiedPrem.csv in Models/EarthModels/PREM
+MODELPATH="$BASE/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv" #Path of the model to be used. Default is SimplifiedPrem.csv in Models/EarthModels/PREM
 GRIDSOURCE=GRID_FROMFILE      # Specify that the grid is read from a file. Otherwise use GRID_UNSPEC.
 
 # /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
@@ -69,10 +68,10 @@ SOURCE_ID=A01 # Chose a DMQ nest ID to run the simulation with. This will automa
                           #nStation, Stationfile1, SourceID1, Stationfile2, SourceID2, ... 
 
 # Path to txt files with source parameters.
-AP12="$BASE/Stations/AP12.txt"
-AP14="$BASE/Stations/AP14.txt"
-AP15="$BASE/Stations/AP15.txt"
-AP16="$BASE/Stations/AP16.txt"
+AP12="$BASE/Params/Stations/AP12.txt"
+AP14="$BASE/Params/Stations/AP14.txt"
+AP15="$BASE/Params/Stations/AP15.txt"
+AP16="$BASE/Params/Stations/AP16.txt"
 
 # MAKE SURE THAT THE GATHER RADIUS IS INITIALISED 
 getSourceParams 4 $SOURCE_ID $AP12 $AP14 $AP15 $AP16 # Get the source parameters from the files.
@@ -123,7 +122,7 @@ mv $outdir/seis_???* seisfiles/ 2>/dev/null
 echo "Converting seismograms to pkl format..."
 "$PYTHON_EXEC" -q - <<EOF
 import os, sys
-sys.path.append("$BASE")
+sys.path.append("$BASE/Python/")
 from Radiative_python_funcs import *
 current_path = os.getcwd()
 seisfiles = os.listdir(os.path.join(current_path, 'seisfiles'))

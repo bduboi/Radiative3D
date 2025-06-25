@@ -19,14 +19,15 @@
 
 ## One-liner description: (Keep this BRIEF.)
 ##
-
-BASE=`pwd`  # Base directory for the run.
+BASE=`pwd`
+echo "Base directory: $BASE"
 SINGLE_CORE=0 # Make sure this is set to 0 for parallel runs, and before sourcing.
+echo "$SINGLE_CORE" > "$BASE/Params/single_core.txt"
 source $BASE/scripts/do-fundamentals.sh
 ENV_PATH="$BASE/R3Denv/bin/activate"
 PYTHON_EXEC="python3"
 
-echo "$SINGLE_CORE" > $BASE/Params/single_core.txt
+
 INTENT="Spherical whole-Earth simulation."
 CAMPAIGN="" ## (e.g. "For AGU Poster Dec 2016" or some such.)
 
@@ -53,7 +54,7 @@ NUMPHONS=1M                   # Number of phonons to spray (Recommend: 50M)
 RECTIME=1200                  # Recording duration of seismometers (seconds).
 BINSIZE=0.5                  # Seismometer time-bin size in seconds
 GATHER=500.0                  # Terminal gather radius, in kilometers.
-MODELPATH="/Users/balthazar/Downloads/Radiative3d-spherical-shells/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv" #Path of the model to be used. Default is SimplifiedPrem.csv in Models/EarthModels/PREM
+MODELPATH="$BASE/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv" #Path of the model to be used. Default is SimplifiedPrem.csv in Models/EarthModels/PREM
 GRIDSOURCE=GRID_FROMFILE      # Specify that the grid is read from a file. Otherwise use GRID_UNSPEC.
 
 
@@ -98,7 +99,7 @@ generateSeisArray $GATHER $nAzi $nDist $dist1 $dist2 # 400 km gather radius,
 
 
 RAD=1737.1
-echo $RAD > $BASE/Params/rad.txt
+echo $RAD > "$BASE/Params/rad.txt"
 ADDITIONAL+="--earthrad=$RAD"  # Additional params. (Such as --ocsraw,
                               # or --earthrad=xxxx) Radii: Earth: 6371 km,
                               # Mars: 3389, Mercury: 2440, Earth's
@@ -143,7 +144,7 @@ mv $outdir/seis_???* seisfiles/ 2>/dev/null
 echo "Converting seismograms to pkl format..."
 "$PYTHON_EXEC" -q - <<EOF
 import os, sys
-sys.path.append("$BASE")
+sys.path.append("$BASE/Python/")
 from Radiative_python_funcs import *
 current_path = os.getcwd()
 seisfiles = os.listdir(os.path.join(current_path, 'seisfiles'))

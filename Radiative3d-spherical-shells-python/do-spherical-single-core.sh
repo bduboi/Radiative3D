@@ -22,6 +22,7 @@
 
 
 BASE=`pwd`  # Base directory for the run.
+echo "Base directory: $BASE"
 PYTHON_EXEC="python3"
 ENV_PATH="$BASE/R3Denv/bin/activate"
 
@@ -31,12 +32,13 @@ tstamp=`date +"%Y%m%d-%H%M%S"`   # Time stamp for the run
 outdirname="$tstamp"-"$RUNID"
 outdir="$BASE/data/Single-core-runs/$outdirname"
 mkdir -p "$outdir"
-echo "$outdir" > $BASE/data/Single-core-runs/latest_run.txt
+echo "$outdir" > "$BASE/data/Single-core-runs/latest_run.txt"
+
 # Here precise that we are running a single core simulation.
 SINGLE_CORE=1
-echo "$SINGLE_CORE" > $BASE/Params/single_core.txt
+echo "$SINGLE_CORE" > "$BASE/Params/single_core.txt"
 
-source $BASE/scripts/do-fundamentals.sh
+source "$BASE/scripts/do-fundamentals.sh"
 
 
 INTENT="Spherical whole-Earth simulation."
@@ -63,7 +65,7 @@ NUMPHONS=100K                   # Number of phonons to spray (Recommend: 50M)
 RECTIME=3600                  # Recording duration of seismometers (seconds).
 BINSIZE=0.5                  # Seismometer time-bin size in seconds
 GATHER=500.0                  # Terminal gather radius, in kilometers.
-MODELPATH="/Users/balthazar/Downloads/Radiative3d-spherical-shells/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv" #Path of the model to be used. Default is SimplifiedPrem.csv in Models/EarthModels/PREM
+MODELPATH="$BASE/Models/MoonModels/SimplifiedModels/SimplfiedISSI_MOON_M2.csv" #Path of the model to be used. Default is SimplifiedPrem.csv in Models/EarthModels/PREM
 GRIDSOURCE=GRID_FROMFILE      # Specify that the grid is read from a file. Otherwise use GRID_UNSPEC.
 
 

@@ -19,16 +19,17 @@
 
 ## One-liner description: (Keep this BRIEF.)
 ##
-BASE=`pwd`  # Base directory for the run.
+pwd=`pwd`
+BASE=$(cat "$pwd/BASE.txt")
 PYTHON_EXEC="python3"
 ENV_PATH="$BASE/R3Denv/bin/activate"
 
 ### Initialization of the simulation name and output directory:
 
 SINGLE_CORE=0
-echo "$SINGLE_CORE" > $BASE/Params/single_core.txt
-
-source $BASE/scripts/do-fundamentals.sh
+echo $SINGLE_CORE > "$BASE/Params/single_core.txt"
+#echo "Reading BASE from $BASE/Params/single_core.txt, set to $SINGLE_CORE, cat : $(cat "$BASE/Params/single_core.txt")"
+source "$BASE/scripts/do-fundamentals.sh"
 
 
 
@@ -54,7 +55,7 @@ SOURCETYP=SDR,90,90,0                 # Or specify directly
                               # (if range [-90,90]).
 
 FREQ=2.0                      # Phonon frequency to model
-NUMPHONS=100K                   # Number of phonons to spray (Recommend: 50M)
+NUMPHONS=10K                   # Number of phonons to spray (Recommend: 50M)
 RECTIME=3600                  # Recording duration of seismometers (seconds).
 BINSIZE=0.5                  # Seismometer time-bin size in seconds
 GATHER=500.0                  # Terminal gather radius, in kilometers.

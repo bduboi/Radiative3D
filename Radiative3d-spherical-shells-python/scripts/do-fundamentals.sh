@@ -9,7 +9,8 @@
 ##    source scripts/do-fundamentals.sh
 ##
 ##
-R3DBASE=`pwd`  # Base directory for the run.
+pwd=`pwd`
+R3DBASE=$(cat "$pwd/BASE.txt")
 echo "R3D BASE DIRECTORY: $R3DBASE"
 export R3DBASE
 
@@ -363,7 +364,8 @@ getSourceParams() { #$1 : number of stations, #2 SourceID #$3 : file1 $4 : file2
   local n=$1
   local source=$2
   shift 2
-  local PARAMFILE="$R3DBASE/source_params.txt"
+  local PARAMFILE="$R3DBASE/Params/source_params.txt"
+  echo "PARAMFILE: $PARAMFILE"
  ADDITIONAL=""
   for ((i=1; i<=n; i++)); do
     local file=$1

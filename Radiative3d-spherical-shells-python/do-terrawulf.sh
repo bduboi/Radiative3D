@@ -1,55 +1,60 @@
 #!/bin/bash -ux
+#PBS -N Radiative3D
+#PBS -M Balthazar.Dubois@anu.edu.au
+#PBS -m abe
+#PBS -d /home/balthazar/Radiative/data/log
+#PBS -o stdout.log
+#PBS -e stderr.log
+#PBS -l nodes=1:t3:ppn=4
+#PBS -l walltime=999:00:00
 
-# Local testing config
+# Load environment
 BASE="/home/balthazar/Radiative"
-PYTHON_EXEC="python3"
+pwd=`pwd`
+echo $BASE > $pwd/BASE.txt
+
+PYTHON_EXEC="$BASE/R3Denv/bin/python"
 ENV_PATH="$BASE/R3Denv/bin/activate"
+SCRIPT="$BASE/scripts/do-spherical-python.sh"
+NPROC=$PBS_NP
 
-NPROC=2   # Number of processes for local test
-
+# Output run config
 SOURCE_ID=$(cat $BASE/Params/source_id.txt)
-echo "Running local test for Source : $SOURCE_ID"
-
 RUNID="spherical-moon-R3D-parallel-$SOURCE_ID"
-tstamp=`date +"%Y%m%d-%H%M%S"`
+tstamp=$(date +"%Y%m%d-%H%M%S")
 outdirname="$tstamp"-"$RUNID"
 outdir="$BASE/data/Parallel-runs/$outdirname"
+
 mkdir -p "$outdir"
-echo $outdir
-echo "$outdir" > $BASE/data/Parallel-runs/latest_run.txt
+echo "$outdir" > "$BASE/data/Parallel-runs/latest_run.txt"
+echo "Running on $NPROC cores. Source: $SOURCE_ID"
+echo "Output directory: $outdir"
 
-# Local MPI run (no PBS, no machinefile)
-mpirun -np $NPROC $BASE/scripts/do-spherical-python.sh
+# Run main simulation
+mpirun -np $PBS_NP -mca btl ^openib --map-by ppr:12:node --machinefile "$PBS_NODEFILE" $SCRIPT
 
+# Prepare logs
+#rm -rf "$BASE/data/log"
+#mkdir -p "$BASE/data/log"
 
-rm -rf $BASE/data/log
-mkdir -p $BASE/data/log
+# ---- Postprocessing & Figures ----
+cd "$outdir"
 
+# Copy figure script
+cp "$BASE/scripts/do-figsonly-python.sh" "$outdir"
+chmod +x "$outdir/do-figsonly-python.sh"
 
-## Figure processing for the BATCH RUN (paralllel run on terrawulf)
+# Copy stdout
+cp process_0/stdout.txt "$outdir/stdout.txt"
 
-# go to base directory
-cd $outdir
+# Activate Python
+source "$ENV_PATH"
 
-# Copy the do-figsonly.sh script to the output directory
-cp $BASE/scripts/do-figsonly-python.sh $outdir
-
-# Give the script execute permissions
-chmod +x $outdir/do-figsonly-python.sh
-
-
-#Get a copy of the stoud file
-cp process_0/stdout.txt $outdir/stdout.txt
-
-## Activate the Python environment:
-source $ENV_PATH
-
-
-# Assemble the seifiles into a single metadata file
-seispattern="process_0/seisfiles/seis_???.pkl" # Here using process_0 as the directory to identify the file pattern
+# Assemble seisfiles
+seispattern="process_0/seisfiles/seis_???.pkl"
 echo "Assembling seismograms..."
-for file1 in "$outdir"/$seispattern;do
-    SeisName=$(basename $file1)
+for file1 in "$outdir"/$seispattern; do
+    SeisName=$(basename "$file1")
     echo "SeisName: $SeisName"
     "$PYTHON_EXEC" -q - <<EOF
 import os, sys
@@ -58,9 +63,9 @@ from Radiative_python_funcs import *
 merge_traces(Directory="$outdir", SeisName="$SeisName", NCore=$NPROC)
 EOF
 done
-# Make seismometer and model maps:
-echo "Plotting model maps and cross-sections."
 
+echo "Plotting model maps and cross-sections."
+RAD=$(cat $BASE/Params/rad.txt)
 cat process_0/stdout.txt | \
     grep -A 10000 "#  R3D_GRID:" | \
     grep -B 10000 "#  END R3D_GRID" | \
@@ -71,7 +76,7 @@ cat process_0/stdout.txt | \
 
 "$PYTHON_EXEC" -q - <<EOF
 import os,sys
-sys.path.append("$BASE")
+sys.path.append("$BASE/Python/")
 from Radiative_python_funcs import *
 current_path = os.getcwd()
 GG=read_gridgeom(f'{current_path}/griddump.txt')
@@ -80,7 +85,6 @@ plot_earth_layers(GG,ax,$RAD,colormap=None,zorder=1)
 os.makedirs('Figures',exist_ok=True)
 plt.savefig('Figures/gridGeometry.pdf',dpi=200)
 EOF
-
 
 
 #if [ "$1" != "noseis" ]; then
@@ -108,7 +112,6 @@ for i in range(0,n_files,2):
     print(f"Processing {ofile}...")
     # Read and plot the seismogram
     seisplot(file_path)    
-    
     # Save the figure
     plt.savefig(os.path.join(output_folder, ofile), dpi=200)
     plt.close()
@@ -125,10 +128,3 @@ echo '///'
 echo "Figure generation complete. To re-run figures, run 'do-figsonly.sh' in"
 echo "the output directory, which may be modified to customize figure output."
 echo "Output has been placed in $outdir."
-#echo "Logfile contents:"
-#cat "$outdir"/logfile
-
-
-# Copy the files to the output 
-## END
-##

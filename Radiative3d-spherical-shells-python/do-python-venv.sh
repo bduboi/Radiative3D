@@ -7,11 +7,11 @@ ENV_NAME="R3Denv"
 # Create virtual environment if it doesn't exist
 if [ ! -d "$ENV_NAME" ]; then
     echo "Creating virtual environment: $ENV_NAME"
-    $PYTHON_EXEC -m venv "$ENV_NAME"
+    $PYTHON_EXEC -m venv $ENV_NAME
+    echo "Virtual environment created."
 else
     echo "Virtual environment $ENV_NAME already exists."
     echo " Installing the required packages."
-    
 fi
 
 

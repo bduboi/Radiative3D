@@ -1,7 +1,7 @@
 #!/bin/bash -ux
 
 # Local testing config
-BASE=`pwd`
+BASE="/home/balthazar/Radiative"
 PYTHON_EXEC="python3"
 ENV_PATH="$BASE/R3Denv/bin/activate"
 PARAMFILE="$BASE/Params/source_params.txt"
@@ -62,7 +62,6 @@ echo "Plotting the tt curve."
 
 ### To do : Set up the normcurve comparison
 RAD=$(cat $BASE/Params/rad.txt)
-echo "Using Earth radius: $RAD km"
 # Individual Traveltime Curves:
 
 produce_ttcurves() {  # $1: station code
@@ -79,7 +78,6 @@ station_code = "$1"  # Pass station code as a string
 ibegin = $2 # Start index for the array
 iend = $3 # End index for the array
 array_dict = assembleArray("$outdir/seisfiles", ibegin, iend)
-print(array_dict['BinSize'])
 fig, ax = plt.subplots(1, 1, figsize=(8, 8))
 plot_ttcurve("$BASE",array_dict, ax, 0, station_code, gamma=$4, norm=0.3, theoretical=False,R=$RAD)
 os.makedirs('Figures', exist_ok=True)
